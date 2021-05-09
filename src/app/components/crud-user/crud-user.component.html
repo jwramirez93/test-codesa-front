@@ -1,0 +1,32 @@
+<div class="info-container">
+    <div class="title-bar">
+        Información del usuario
+    </div>
+    <div class="buttons">
+        <button [class]="classBtnActive" [disabled]="!disableBtn" id="btn_save_user" (click)="saveUser()">Guardar </button>
+        <button [class]="classBtnActiveReverse" [disabled]="disableBtn" id="btn_edit_user" (click)="editUser()">Editar</button>
+        <button [class]="classBtnActiveReverse" [disabled]="disableBtn" id="btn_delete_user" (click)="deleteUser()">Eliminar</button>
+    </div>
+    <div class="control">
+        <div class="input">
+            <label for="id" >Id</label>
+            <input type="text" id="txt_user_id" disabled [(ngModel)]="usuario.id" />
+        </div>
+        <div class="input">
+            <label for="name">Nombre</label>
+            <input type="text" id="txt_user_name" [(ngModel)]="usuario.nombre" />
+        </div>
+        <div class="input">
+            <label for="rol">Rol</label>
+            <select type="text" id="select_rol" [(ngModel)]="usuario.rol.id" (change)="onChange(usuario.rol.id)">
+                <option value="0" disabled></option>
+                <option *ngFor="let rol of listRoles" value="{{rol.id}}">{{ rol.nombre }}</option>
+            </select>
+        </div>
+        <div class="input radio">
+            <label for="state">Activo</label>
+            <input type="radio" name="state" [(ngModel)]="usuario.activo" id="radio_status_s" value="S" /> SI
+            <input type="radio" name="state" [(ngModel)]="usuario.activo" id="radio_status_n" value="N" /> NO
+        </div>
+    </div>
+</div>

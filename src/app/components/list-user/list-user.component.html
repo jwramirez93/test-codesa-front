@@ -1,0 +1,31 @@
+<div class="list-container">
+    <div class="title-bar">
+        Lista de usuarios
+    </div>
+    <div class="buttons">
+        <button id="btn_create_user" (click)="showViewCrud(0)" >Crear</button>
+    </div>
+    <div class="control">
+        <div class="frame">
+            <div class="table">
+                <div class="row">
+                    <div class="col col-id">Id</div>
+                    <div class="col col-nombre-rol">Rol</div>
+                    <div class="col col-nombre">Nombre</div>
+                    <div class="col col-activo">Activo</div>
+                </div>
+                <div id="contentRows">
+                    <div class="row body-rows" *ngFor="let user of listUsuarios" (click)="showViewCrud(user)">
+                        <div class="colEmpty" *ngIf="listUsuarios.length == 0">No hay data</div>
+                        
+                        <div class="col col-id">{{ user.id }}</div>
+                        <div class="col col-nombre-rol">{{ user.rol.nombre }}</div>
+                        <div class="col col-nombre">{{ user.nombre }}</div>
+                        <div class="col col-activo">{{ user.activo }}</div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

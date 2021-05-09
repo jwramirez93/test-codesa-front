@@ -1,0 +1,86 @@
+
+.info-container {
+    width: 25%;
+    margin: 50px auto;
+    background-color: #b7b5b5;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info-container .title-bar {
+    background-color: blue;
+    color: white;
+    width: 100%;
+}
+
+.info-container .buttons .btnActive:hover {background-color: blue; color: white}
+
+.info-container .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.info-container .buttons button {
+    width: 90px;
+    height: 25px;
+    background-color: #b7b5b5;
+    border: 1px solid black;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+.info-container .control {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-container .control .input {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-container .control .input label {
+    height: 25px;
+    margin-left: 20px;
+    width: 60px;
+}
+
+.info-container .control .input input {
+    width: 150px;
+    height: 25px;
+    margin-left: 15px;
+    border: 1px solid black;
+}
+
+.info-container .control .radio input {
+    background-color: white;
+}
+
+.info-container .control .input input[type='radio'] {
+    width: 15px;
+    height: 25px;
+    margin-left: 15px;
+    border: 1px solid black;
+}
+
+.info-container .control .input input[type='radio']:checked {
+    background-color: black;
+    color: black;
+}
+
+.info-container .control .input select {
+    width: 155px;
+    height: 25px;
+    margin-left: 15px;
+    border: 1px solid black;
+}

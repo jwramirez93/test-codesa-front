@@ -1,0 +1,94 @@
+.list-container {
+    width: 65%;
+    margin: 50px auto;
+    background-color: #b7b5b5;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list-container .title-bar {
+    background-color: blue;
+    color: white;
+    width: 100%;
+}
+
+.list-container .buttons button:hover {background-color: blue; color: white}
+
+.list-container .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.list-container .buttons button {
+    width: 90px;
+    height: 25px;
+    background-color: #b7b5b5;
+    border: 1px solid black;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+.list-container .control {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-container .control .frame {
+    width: 100%;
+    height: 100%;
+}
+
+.list-container .control .frame  .table {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+}
+
+.list-container .control .frame .table .row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+.list-container .control .frame .table .body-rows:hover {
+    background-color: blue;
+    color: white;
+}
+
+.list-container .control .frame .table .col {
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+.list-container .control .frame .table .col-id {
+    width: 10%;
+}
+
+.list-container .control .frame .table .col-nombre-rol {
+    width: 25%;
+}
+
+.list-container .control .frame .table .col-nombre {
+    width: 55%;
+}
+
+.list-container .control .frame .table .col-activo {
+    width: 10%;
+}
+
+.list-container .control .frame .table .colEmpty {
+    flex-direction: column;
+    border-right: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
