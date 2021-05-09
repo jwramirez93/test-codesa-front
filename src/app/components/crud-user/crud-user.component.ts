@@ -74,10 +74,10 @@ export class CrudUserComponent implements OnChanges {
 
   saveUser(){
 
-    var alerts = this.validateFields();
+    var alertsField = this.validateFields();
 
-    if(alerts.length > 1){
-      alert("Solucione los siguiente errores: \n"+alerts);
+    if(alertsField.length > 1){
+      alert("Solucione los siguiente errores: \n"+alertsField);
     }else{
       this.usuarioService.saveUser(this.usuario).
         subscribe(responseService => {
@@ -95,11 +95,10 @@ export class CrudUserComponent implements OnChanges {
 
   editUser(){
     
-    var alerts = this.validateFields();
-    console.log(JSON.stringify(this.usuario))
+    var alertsField = this.validateFields();
 
-    if(alerts.length > 1){
-      alert("Solucione los siguiente errores: \n"+alerts);
+    if(alertsField.length > 1){
+      alert("Solucione los siguiente errores: \n"+alertsField);
     }else{
       this.usuarioService.editUser(this.usuario).
         subscribe(responseService => {
@@ -122,10 +121,10 @@ export class CrudUserComponent implements OnChanges {
 
   deleteUser(){
     
-    var alerts = this.validateFields();
+    var alertsField = this.validateFields();
 
-    if(alerts.length > 1){
-      alert("Solucione los siguiente errores: \n"+alerts);
+    if(alertsField.length > 1){
+      alert("Solucione los siguiente errores: \n"+alertsField);
     }else{
 
       if(window.confirm('¿Desea eliminar el usuario '+this.usuario.nombre+'?')){
@@ -146,21 +145,21 @@ export class CrudUserComponent implements OnChanges {
   }
 
   validateFields(){
-    var alerts : string = '';
+    var alertsField : string = '';
 
     if(this.usuario.nombre.trim() == ''){
-      alerts += 'Debe de ingresar un nombre para el usuario \n';
+      alertsField += 'Debe de ingresar un nombre para el usuario \n';
     }
 
-    if(this.usuario.activo == ''){
-      alerts += 'Debe de escoger un estado para el usuario \n';
+    if(this.usuario.activo.trim() == ''){
+      alertsField += 'Debe de escoger un estado para el usuario \n';
     }
 
     if(this.usuario.rol.id == 0){
-      alerts += 'Debe de escoger un rol para el usuario \n';
+      alertsField += 'Debe de escoger un rol para el usuario \n';
     }
 
-    return alert;
+    return alertsField;
   }
 
 }
