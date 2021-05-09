@@ -71,7 +71,7 @@
 }
 
 .list-container .control .frame .table .col-id {
-    width: 10%;
+    width: 20%;
 }
 
 .list-container .control .frame .table .col-nombre-rol {
@@ -79,11 +79,11 @@
 }
 
 .list-container .control .frame .table .col-nombre {
-    width: 55%;
+    width: 40%;
 }
 
 .list-container .control .frame .table .col-activo {
-    width: 10%;
+    width: 15%;
 }
 
 .list-container .control .frame .table .colEmpty {
